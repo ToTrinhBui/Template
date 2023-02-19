@@ -1,0 +1,264 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FFF5EE;
+}
+
+.container {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  border-bottom: 1px solid #303030;
+}
+
+.navbar img {
+  margin: 100px;
+  width: 60px;
+  border-radius: 40%;
+  box-shadow: 5px 2px #dbdbdb;
+}
+
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  width: 500px;
+}
+
+.navbar li {
+  padding: 22px;
+  font-size: medium;
+}
+
+.navbar button {
+  border: solid 1px #303030;
+  border-radius: 45px;
+  background-color: #75FBC0;
+  padding: 10px 30px;
+  margin-right: 20px;
+  font-size: medium;
+}
+
+.title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-family: 'Bungee', cursive;
+  font-size: 80px;
+  background-color: #75FBC0;
+  line-height: 90px;
+  height: 50px;
+  margin-bottom: 55px;
+}
+
+.infor {
+  height: 300px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.infor .split {
+  height: 300px;
+  position: absolute;
+}
+
+.left {
+  left: 0;
+  width: 65%;
+  border: solid 1px #303030;
+}
+
+.left .content {
+  margin: 40px;
+  font-size: 20px;
+}
+
+.left button {
+  border: solid 1px #303030;
+  border-radius: 25px;
+  background-color: #75FBC0;
+  padding: 10px;
+}
+
+.right {
+  right: 0;
+  width: 35%;
+  border-top: solid 1px #303030;
+  border-bottom: solid 1px #303030;
+}
+
+.khung {
+  height: 180px;
+  width: 180px;
+  background-color: #75FBC0;
+  border-radius: 20px;
+}
+
+.right img {
+  height: 160px;
+  border-radius: 20px;
+}
+
+.contact {
+  padding: 0px 90px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #303030;
+  color: #303030;
+}
+
+.contact ul {
+  padding-left: 90px;
+  list-style-type: none;
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+}
+
+.contact img {
+  height: 60px;
+  width: 60px;
+  border-radius: 20px;
+}
+
+.language {
+  height: 700px;
+  color: white;
+  background-color: #05171C;
+}
+
+.language h1 {
+  padding: 40px;
+  margin: 0;
+  font-weight: 300;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.language span {
+  font-weight: 1000;
+}
+
+.lang-box {
+  height: 450px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lang-items {
+  width: 400px;
+  margin: 0;
+  text-align: center;
+}
+
+.lang-items img {
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lang-items h1 {
+  padding: 8px;
+  font-size: 35px;
+}
+
+.lang-items h3 {
+  font-size: 18px;
+  margin-top: 0;
+  font-weight: 200;
+}
+
+.lang-items h4 {
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid #FFFFFF;
+  background-color: #142125;
+  margin: 10px;
+  font-weight: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  margin: 60px 40px;
+  color: #303030;
+}
+
+.project h1 {
+  font-family: 'Bungee', cursive;
+  font-size: 80px;
+  margin: 25px;
+  line-height: 100%;
+}
+
+.project-box {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project-items {
+  width: 280px;
+  border: 1px solid #303030;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+
+.project-items img {
+  height: 150px;
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-items h3 {
+  margin: 10px 20px;
+}
+
+.project-tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 20px;
+}
+
+.project-items h5 {
+  margin: 0px 3px;
+  font-weight: 400;
+  background-color: #E9DFFC;
+  color: #a274f8;
+  border: 1px solid #a274f8;
+  border-radius: 12px;
+  padding: 3px;
+}
+
+.project-items button {
+  margin: 10px 20px 20px;
+  height: 30px;
+  background-color: #292929;
+  color: #FFFFFF;
+  text-align: center;
+  width: 85%;
+}
+.footer{
+  background-color: #FFFFFF;
+}
