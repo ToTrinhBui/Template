@@ -56,6 +56,7 @@ body {
   line-height: 90px;
   height: 50px;
   margin-bottom: 55px;
+  color: #303030;
 }
 
 .infor {
@@ -136,16 +137,16 @@ body {
 }
 
 .language {
-  height: 700px;
   color: white;
   background-color: #05171C;
+  padding: 70px 50px;
 }
 
 .language h1 {
-  padding: 40px;
+  padding-bottom: 40px;
   margin: 0;
   font-weight: 300;
-  font-size: 50px;
+  font-size: 55px;
   text-transform: uppercase;
 }
 
@@ -154,7 +155,6 @@ body {
 }
 
 .lang-box {
-  height: 450px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -175,7 +175,7 @@ body {
 
 .lang-items h1 {
   padding: 8px;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .lang-items h3 {
@@ -259,6 +259,51 @@ body {
   text-align: center;
   width: 85%;
 }
+.skill{
+  border-bottom: 1px solid #303030;
+  border-top: 1px solid #303030;
+  padding: 50px;
+}
+.skill h1{
+  font-family: 'Bungee', cursive;
+  font-size: 80px;
+  margin: 20px 0px 50px;
+  line-height: 100%;
+  color: #303030;
+}
+.skill-box{
+  display: flex;
+  justify-content: space-around;
+}
+.skill-items{
+  text-align: center;
+  width: 320px;
+}
+.skill-items img{
+  height: 180px;
+}
+.skill-items h2{
+  text-transform: uppercase;
+  font-weight: 1000;
+}
 .footer{
   background-color: #FFFFFF;
+  padding: 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-items h2{
+  position: relative;
+  padding: 0px 100px;
+  border-right: 1px solid #303030;
+}
+.footer-items h2::before{
+  position: absolute ;
+  content: "";
+  width: 220px;
+  height: 2px;
+  bottom: 0%;
+  left: 5%;
+  background-color: #a274f8;
 }

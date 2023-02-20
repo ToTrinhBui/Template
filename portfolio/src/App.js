@@ -6,6 +6,7 @@ import Navbar from "./componants/Navbar";
 import Title from "./componants/Title";
 import Project from "./componants/Project";
 import Footer from "./componants/Footer";
+import Skill from "./componants/Skill";
 function App() {
   return (
     <div className="container">
@@ -15,6 +16,7 @@ function App() {
       <Contact />
       <Language />
       <Project />
+      <Skill />
       <Footer />
     </div>
   );
