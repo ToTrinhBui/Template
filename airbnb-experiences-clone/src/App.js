@@ -8,7 +8,14 @@ function App() {
     <div className="container">
       <Navbar />
       <Introduce />
-      <Card/>
+      <Card
+        img= {require('./images/image-12.png')}
+        rating="5.0"
+        reviewCount={6}
+        country="USA"
+        title="Life lesson with Katie Zaferes"
+        price={136}
+      />
     </div>
   );
 }
