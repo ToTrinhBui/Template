@@ -1,40 +1,55 @@
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.container{
   font-family: 'Poppins', sans-serif;
 }
-header{
+
+header {
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
-header img{
+
+header img {
   height: 30px;
   padding: 25px 30px;
 }
-.intro{
+
+.intro {
   padding: 40px 50px;
 }
-.intro img{
+
+.intro img {
   margin: auto;
   display: block;
 }
-.intro h1{
+
+.intro h1 {
   font-size: 36px;
   font-weight: 600;
 }
-.intro p{
+
+.intro p {
   width: 320px;
 }
-.card{
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 40px;
+  padding: 30px;
+}
+
+.card {
   position: relative;
-  margin: 0px 50px;
   width: 264px;
   line-height: 110%;
 }
 
-.card h5{
+.card img{
+  display: block;
+  width: 100%;
+}
+
+.card h5 {
   background-color: #FFFFFF;
   position: absolute;
   border-radius: 2px;
@@ -45,13 +60,20 @@ header img{
   font-weight: 300;
   margin: 0;
 }
-.card-infor{
+
+.card-infor {
   margin: 0;
 }
-.rating{
+
+.rating {
   display: flex;
   align-items: center;
 }
-.rating span{
+
+.rating img{
+  width: 20px;
+}
+
+.rating span {
   color: #918E9B;
 }

@@ -1,21 +1,27 @@
 import Card from "./componants/Card";
 import Introduce from "./componants/Introduce";
 import Navbar from "./componants/Navbar";
-
+import data from "./data";
 
 function App() {
+  const cards = data.map(element => {
+    return <Card
+      img={element.img}
+      rating={element.rating}
+      reviewCount={element.reviewCount}
+      country={element.country}
+      title={element.title}
+      price={element.price}
+      status={element.status}
+    />
+  })
   return (
     <div className="container">
       <Navbar />
       <Introduce />
-      <Card
-        img= {require('./images/image-12.png')}
-        rating="5.0"
-        reviewCount={6}
-        country="USA"
-        title="Life lesson with Katie Zaferes"
-        price={136}
-      />
+      <div className="cards">
+        {cards}
+      </div>
     </div>
   );
 }
