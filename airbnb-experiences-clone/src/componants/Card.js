@@ -1,13 +1,21 @@
 import React from "react";
-// import image_12 from "../images/image-12.png";
+// import image_12 from "";
 
 import star from "../images/Star 1.png"
 export default function Card(props) {
     console.log(props)
+    let badgeText
+    if (props.status === 0) {
+        badgeText = "SOLD OUT"
+    } else if (props.status === 1) {
+        badgeText = "ONLINE"
+    }
+
     return (
         <div className="card">
-            <img src={props.img} alt="present" />
-            <h5 className="status">{props.status}</h5>
+            <img src={require(`../images/${props.img}`)} alt="present" />
+            {badgeText && <h5 className="status">{badgeText}</h5>}
+            {/* <h5 className="status">{badgeText}</h5> */}
             <div className="card-infor">
                 <div className="rating">
                     <img src={star} alt="star" className="rating-star"/>

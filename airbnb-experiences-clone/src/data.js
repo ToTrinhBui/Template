@@ -1,56 +1,62 @@
 export default [
     {
-        img: require('./images/image-12.png'),
+        id: 1,
+        img: 'image-12.png',
         rating: "5.0",
         reviewCount: 6,
         country: "USA",
         title: "Life lesson with Katie Zaferes",
         price: 136,
-        status: "sold out"
+        status: 0
     },
     {
-        img: require('./images/image-13.png'),
+        id: 2,
+        img: 'image-13.png',
         rating: "5.0",
         reviewCount: 30,
         country: "USA",
         title: "Learn wedding photography",
         price: 125,
-        status: "online"
+        status: 1
     },
     {
-        img: require('./images/image-14.png'),
+        id: 3,
+        img: 'image-14.png',
         rating: "4.8",
         reviewCount: 2,
         country: "USA",
         title: "Group Mountain Biking",
         price: 50,
-        status: "sold out"
+        status: 0
     },
     {
-        img: require('./images/image-12.png'),
+        id: 4,
+        img: 'image-12.png',
         rating: "5.0",
         reviewCount: 6,
         country: "USA",
         title: "Life lesson with Katie Zaferes",
         price: 136,
-        status: "sold out"
+        status: 0
     },
     {
-        img: require('./images/image-13.png'),
+        id: 5,
+        img: 'image-13.png',
         rating: "5.0",
         reviewCount: 30,
         country: "USA",
         title: "Learn wedding photography",
         price: 125,
-        status: "online"
+        status: 1
     },
-    {
-        img: require('./images/image-14.png'),
+    {   
+        id: 6,
+        img: 'image-14.png',
         rating: "4.8",
         reviewCount: 2,
         country: "USA",
         title: "Group Mountain Biking",
         price: 50,
-        status: "sold out"
+        status: 0
     }
 ] 
