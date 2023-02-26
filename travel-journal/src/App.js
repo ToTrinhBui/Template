@@ -1,5 +1,5 @@
-import Card from "./componants/Card";
-import Navbar from "./componants/Navbar";
+import Card from "./components/Card";
+import Navbar from "./components/Navbar";
 import data from "./data";
 function App() {
   const cards = data.map(element => {

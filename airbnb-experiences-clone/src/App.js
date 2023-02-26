@@ -1,6 +1,6 @@
-import Card from "./componants/Card";
-import Introduce from "./componants/Introduce";
-import Navbar from "./componants/Navbar";
+import Card from "./components/Card";
+import Introduce from "./components/Introduce";
+import Navbar from "./components/Navbar";
 import data from "./data";
 
 function App() {
