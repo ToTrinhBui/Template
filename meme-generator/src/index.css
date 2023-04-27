@@ -57,3 +57,8 @@ header > h3{
   border-radius: 5px;
   border: none;
 }
+
+.meme-image {
+  width: 100%;
+  margin-top: 25px;
+}
