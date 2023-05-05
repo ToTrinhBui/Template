@@ -16,9 +16,9 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/add" element={<AddBook />} />
-          <Route path="/edit" element={<EditBook />} />
-          <Route path="/view" element={<DetailBook />} />
-          <Route path="/delete" element={<DeleteBook />} />
+          <Route path="/edit/:id" element={<EditBook />} />
+          <Route path="/view/:id" element={<DetailBook />} />
+          <Route path="/delete/:id" element={<DeleteBook />} />
         </Routes>
       </BrowserRouter>
     </div>

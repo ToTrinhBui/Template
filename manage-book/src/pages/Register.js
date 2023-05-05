@@ -1,18 +1,67 @@
-import React, {useState} from "react";
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Register() {
-    const [password, setPassword] = useState("");
+
+    const [user, setUser] = useState({
+        email: "",
+        password: "",
+        username: "",
+    });
+
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [errorMessage, setErrorMessage] = useState(null);
+
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (password !== confirmPassword) {
+        if (user.password !== confirmPassword) {
             alert("Passwords do not match");
-        } else {
-            // Perform sign-in logic
+        } 
+        else if(!user.email || !user.password || !user.username){
+            alert("Please fill fields");
+        } 
+        else {
+            fetch("http://localhost:8081/auth/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(user)
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Failed to register");
+                    } else {
+                        navigate(`/login`);
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                    setErrorMessage(`${error.message}. It's possible that an account with this email already exists.`);
+                });
         }
     };
+
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        if (name === "password") {
+            setUser(prevState => ({
+                ...prevState,
+                password: value
+            }));
+        } else if (name === "confirmPassword") {
+            setConfirmPassword(value);
+        } else {
+            setUser(prevState => ({
+                ...prevState,
+                [name]: value
+            }));
+        }
+    };
+
 
     return (
         <div>
@@ -25,19 +74,28 @@ export default function Register() {
                 <div className="right">
                     <h2>Welcome</h2>
                     <h1 style={{ color: "#3949AB" }}>Create an account</h1>
-                    <form onSubmit={handleSubmit}>
+                    <form>
                         <div className="input-user">
                             <div className="input-part">
+                                <img src={process.env.PUBLIC_URL + "/images/user.png"} alt="email" />
+                                <input type="text" placeholder="Username" name="username"
+                                    value={user.username}
+                                    onChange={handleChange} />
+                            </div>
+                            <div className="input-part">
                                 <img src={process.env.PUBLIC_URL + "/images/email.png"} alt="email" />
-                                <input placeholder="Email" type="text" />
+                                <input placeholder="Email" type="text" name="email"
+                                    value={user.email}
+                                    onChange={handleChange} />
                             </div>
                             <div className="input-part">
                                 <img src={process.env.PUBLIC_URL + "/images/lock.png"} alt="password" />
                                 <input
                                     placeholder="Password"
                                     type="password"
-                                    value={password}
-                                    onChange={(event) => setPassword(event.target.value)}
+                                    value={user.password}
+                                    onChange={handleChange}
+                                    name="password"
                                 />
                             </div>
                             <div className="input-part">
@@ -46,15 +104,19 @@ export default function Register() {
                                     placeholder="Confirm Password"
                                     type="password"
                                     value={confirmPassword}
-                                    onChange={(event) => setConfirmPassword(event.target.value)}
+                                    onChange={handleChange}
+                                    name="confirmPassword"
                                 />
                             </div>
+                            {errorMessage && <p className="error-message">{errorMessage}</p>}
                         </div>
-                        <button type="submit">Sign up</button>
+                        <button type="submit" onClick={handleSubmit}>Sign up</button>
                     </form>
-                    <p>
-                        Already have an account? <Link to="/login"><span>Sign in</span></Link>
-                    </p>
+                    <div className="redirect">
+                        <p>
+                            Already have an account? <Link to="/login"><span>Sign in</span></Link>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 export default function Footer(props) {
+
     return (
         <footer>
             {props.isShow && props.content !== 'Edit' ? (
-                <button className="submit">{props.content}</button>
+                <button className="submit" form="form-book" type="submit">{props.content}</button>
             ) : (
                 props.content === 'Edit' && (
-                    <Link to='/edit'><button className="submit">{props.content}</button></Link>
+                    <Link to={`/edit/${props.data.id}`}><button className="submit">{props.content}</button></Link>
                 )
             )}
             <div className="grid">

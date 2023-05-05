@@ -32,6 +32,7 @@ button {
 
 .container {
   margin: 50px 100px;
+  min-height: 450px;
 }
 
 .left,
@@ -39,6 +40,10 @@ button {
   width: 50%;
 }
 
+.error-message {
+  color: red;
+  font-size: 12px;
+}
 /* Navbar */
 /*--------------header--------*/
 header {
@@ -99,7 +104,7 @@ footer {
 
 /* Login */
 .login {
-  margin: 30px 80px;
+  margin: 40px 80px;
   display: flex;
   text-align: center;
   align-items: center;
@@ -141,13 +146,18 @@ footer {
   padding: 5px;
 }
 
-.login .right p {
+.redirect p {
   color: #828282;
   font-size: 14px;
 }
 
 .login span {
   color: #3949AB;
+}
+
+.input-user img {
+  width: 20px;
+  height: 20px;
 }
 
 .login button {
@@ -217,7 +227,7 @@ footer {
 }
 
 .main tr:hover {
-  background: #3948ab31;
+  background: #435bf77c;
 }
 
 .main th {
@@ -279,8 +289,22 @@ footer {
   background: #fff url(../public/images/upload.png) no-repeat;
   background-size: 80%;
   background-position: center;
+  border-radius: 5px;
+  border: 2px solid #9e9595c4;
 }
 
+.img-input::-webkit-file-upload-button{
+  visibility: hidden;
+}
+.img-input::file-selector-button{
+  content: 'Choose file';
+  background: #000000;
+  box-shadow: 4px 4px #000000;
+  color: white;
+  padding: 3px;
+  margin-right: 10px;
+  cursor: pointer;
+}
 .upload {
   width: 150px;
   padding: 10px;
@@ -322,4 +346,14 @@ footer {
 
 .card ::placeholder {
   color: rgb(192, 192, 192);
+}
+
+/* Require */
+.require p{
+  font-size: 18px;
+}
+
+.require span{
+  font-weight: 800;
+  color: #3949AB;
 }

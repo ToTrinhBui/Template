@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default function Main() {
+    const [isLogin, setIsLogin] = useState(false);
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        const login = JSON.parse(localStorage.getItem('isLogin'));
+        setIsLogin(login);
+    }, []);
+
+    useEffect(() => {
+        axios.get('http://localhost:8081/books')
+            .then(response => (
+                setItems(response.data)
+            ))
+            .catch(error =>
+                console.error(error)
+            );
+    }, []);
+
     return (
         <div className="container">
             <div className="title">
@@ -10,7 +29,7 @@ export default function Main() {
                         <h5>EXPLORE YOUR BOOK WORLD</h5>
                         <h2>Book List</h2>
                     </div>
-                    <Link to='/add'><p className="inputAdd">Add book</p></Link>
+                    {isLogin && <Link to='/add'><p className="inputAdd">Add book</p></Link>}
                 </div>
             </div>
             <div className="main">
@@ -20,18 +39,29 @@ export default function Main() {
                             <th >ID</th>
                             <th >Book Name</th>
                             <th >Author</th>
-                            <th></th>
-                            <th></th>
+                            {isLogin &&
+                                <>
+                                    <th></th>
+                                    <th></th>
+                                </>
+                            }
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>id</td>
-                            <td>name</td>
-                            <td>author</td>
-                            <td className="link" ><Link to='/view' >View</Link></td >
-                            <td className="link"><Link to='/delete' >Delete</Link></td>
-                        </tr>
+                        {items.map(item => (
+                            <tr key={item.id}>
+                                <td>{item.id}</td>
+                                <td>{item.title}</td>
+                                <td>{item.author}</td>
+                                {isLogin &&
+                                    <>
+                                        <td className="link" ><Link to={`/view/${item.id}`} >View</Link></td >
+                                        <td className="link"><Link to={`/delete/${item.id}`} >Delete</Link></td>
+                                    </>
+                                }
+                            </tr>
+                        ))}
+
                     </tbody>
                 </table>
             </div>
