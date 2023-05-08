@@ -49,7 +49,7 @@ export default function DeleteBook() {
         })
             .then(response => {
                 if (!response.ok) {
-                    throw new Error("Failed to add book");
+                    throw new Error("Failed to delete book");
                 } else {
                     navigate(`/`);
                 }

@@ -32,7 +32,7 @@ button {
 
 .container {
   margin: 50px 100px;
-  min-height: 450px;
+  min-height: 68vh;
 }
 
 .left,
@@ -44,6 +44,7 @@ button {
   color: red;
   font-size: 12px;
 }
+
 /* Navbar */
 /*--------------header--------*/
 header {
@@ -216,39 +217,39 @@ footer {
   color: #222222;
 }
 
-.main table {
+.main-table table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
 }
 
-.main tr:nth-child(even) {
+.main-table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-.main tr:hover {
+.main-table tr:hover {
   background: #435bf77c;
 }
 
-.main th {
+.main-table th {
   color: gray;
   font-size: 20px;
   border-bottom: 1px solid lightgray;
   padding: 10px;
 }
 
-.main td {
+.main-table td {
   color: black;
   font-size: 17px;
   border-bottom: 1px solid lightgray;
   padding: 6px;
 }
 
-.main .link {
+.main-table .link {
   text-align: right;
 }
 
-.main .link a {
+.main-table .link a {
   color: #d69f15;
 }
 
@@ -293,10 +294,11 @@ footer {
   border: 2px solid #9e9595c4;
 }
 
-.img-input::-webkit-file-upload-button{
+.img-input::-webkit-file-upload-button {
   visibility: hidden;
 }
-.img-input::file-selector-button{
+
+.img-input::file-selector-button {
   content: 'Choose file';
   background: #000000;
   box-shadow: 4px 4px #000000;
@@ -305,6 +307,7 @@ footer {
   margin-right: 10px;
   cursor: pointer;
 }
+
 .upload {
   width: 150px;
   padding: 10px;
@@ -349,11 +352,11 @@ footer {
 }
 
 /* Require */
-.require p{
+.require p {
   font-size: 18px;
 }
 
-.require span{
+.require span {
   font-weight: 800;
   color: #3949AB;
 }

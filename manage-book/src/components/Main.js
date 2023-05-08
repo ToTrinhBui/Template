@@ -22,7 +22,7 @@ export default function Main() {
     }, []);
 
     return (
-        <div className="container">
+        <div className="container main">
             <div className="title">
                 <div className="flex1">
                     <div className="heading">
@@ -32,7 +32,7 @@ export default function Main() {
                     {isLogin && <Link to='/add'><p className="inputAdd">Add book</p></Link>}
                 </div>
             </div>
-            <div className="main">
+            <div className="main-table">
                 <table>
                     <thead>
                         <tr>

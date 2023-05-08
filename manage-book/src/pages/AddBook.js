@@ -49,7 +49,7 @@ export default function AddBook() {
     return (
         <>
             <Navbar />
-            <>
+            <main>
                 {showDiv && <>
                     {isLogin ?
                         (<>
@@ -62,7 +62,7 @@ export default function AddBook() {
                     }
                 </>
                 }
-            </>
+            </main>
         </>
     );
 }

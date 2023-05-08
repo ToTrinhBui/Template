@@ -15,22 +15,22 @@ export default function Footer(props) {
             <div className="grid">
                 <div >
                     <h3>Môn học</h3>
-                    <p>Input</p>
+                    <p>XXXXXXXXX</p>
                 </div>
 
                 <div >
                     <h3>Giảng viên hướng dẫn</h3>
-                    <p>Input</p>
+                    <p>XXXXXXXXX</p>
                 </div>
 
                 <div >
                     <h3>Sinh viên thực hiện</h3>
-                    <p>Input</p>
+                    <p>Bùi Tố Trinh</p>
                 </div>
 
                 <div >
                     <h3>Mã sinh viên</h3>
-                    <p>B19DCCN</p>
+                    <p>B19DCCNXXX</p>
                 </div>
             </div>
         </footer>
